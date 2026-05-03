@@ -1,4 +1,4 @@
-Course Repository – Weekly Lab & Tasks
+ Course Repository – Weekly Lab & Tasks
 
 Welcome to the official course repository. This repository will be updated **every week during class sessions** with new code examples and tasks.
 
