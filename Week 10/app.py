@@ -5,14 +5,13 @@ def sign_in():
    global username,password
    user=username.get()
    pas=password.get()
-   with open("cadentials.txt","r")as f:  
-         for line in f:
-            data=line.strip().split(":")
-            if data[0]==user and data[1]==pas:
-                main_menu()
-                break
-            else:
-                tk.Label(root,text="invalid username or password").pack()
+   with open("cadentials.txt","r")as f:
+    for line in f:
+        data=line.strip().split(":")
+        if data[0]==user and data[1]==pas:
+            main_menu(user)
+        else:
+            tk.Label(root,text="invalid username or password").pack()
 # File write Sign Up function
 
 def sign_up():
@@ -66,10 +65,10 @@ def sign_up_window():
     signin.pack(pady=10)
 # main menu window
 
-def main_menu():
+def main_menu(name):
     for widget in root.winfo_children():
         widget.destroy()
-    tk.Label(root,text=f"welcome {username.get()}").pack(pady=10)
+    tk.Label(root,text=f"welcome {name}").pack(pady=10)
     tk.Button(root,text="btn 1").pack(pady=10)
     tk.Button(root,text="btn 2").pack(pady=10)
     tk.Button(root,text="btn 3").pack(pady=10)
