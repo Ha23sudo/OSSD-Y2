@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import csv
 
 def get_cars_data(car):
     
@@ -39,4 +39,14 @@ def scrapper():
 
 # create a function to save data to a csv file
 def save_to_file(data, filename):
-    pass
+    if not filename.endswith('.csv'):
+        filename += '.csv'
+    
+    with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['name', 'price']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        writer.writeheader()
+        writer.writerows(data)
+    
+    print(f"Data saved to {filename}")
