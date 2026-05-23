@@ -34,7 +34,7 @@ def get_cars_data(car):
 
 #create a function to scrape data from the webpage, the above code can be used inside the function
 def scrapper():
-    brand=input("Enter brand to serch its data :")
+    brand=input("Enter the car brand: ")
     link=f'https://www.pakwheels.com/new-cars/pricelist/{brand}'
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
