@@ -12,14 +12,14 @@ root.title("Car Price Scraper")
 root.geometry("600x400")
 
 #Step 1
-car_manufact=['toyota', 'honda', 'suzuki']
+car_manufact=['toyota', 'honda', 'suzuki', 'hyundai', 'kia', 'nissan', 'mitsubishi', 'subaru', 'mazda', 'faw']
 
 dropdown=ttk.Combobox(root, values=car_manufact)
 
 dropdown.current(2)
-dropdown.pack(pady=20)
+dropdown.pack(pady=20,padx=50)
 search_button=tk.Button(root, text="Search",command=lambda: set_textarea(get_cars_data(dropdown.get())))
-search_button.pack(pady=10)
+search_button.pack(pady=10,padx=50)
 textarea=tk.Text(root, height=25, width=60)
 textarea.pack(pady=20)
 
