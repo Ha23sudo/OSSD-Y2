@@ -79,7 +79,7 @@ def sign_up_window():
     for widget in root.winfo_children():
         widget.destroy()
 
-    tk.Label(root, text="Sign Up", font=("Arial", 16)).pack(pady=10)
+    tk.Label(root, text="Sign Up", font=("Arial", 16)).pack(pady=5)
 
     tk.Label(root, text="Username").pack()
     username_entry = tk.Entry(root)
@@ -104,7 +104,7 @@ def main_menu():
 # root window
 root = tk.Tk()
 root.title("Application")
-root.geometry("300x200")
+root.geometry("300x350")
 sign_in_window()
 
 root.mainloop()
